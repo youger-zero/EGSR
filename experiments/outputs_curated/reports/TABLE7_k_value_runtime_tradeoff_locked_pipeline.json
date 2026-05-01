@@ -1,0 +1,83 @@
+{
+  "title": "Table 7. K-Value and Runtime Trade-off of the Locked EGSR Pipeline",
+  "split": "test",
+  "rows": [
+    {
+      "K": 5,
+      "LS": 99.0,
+      "AS": 94.6,
+      "PR": 81.1,
+      "TS": 80.7,
+      "Assembly + Constraint Time": 0.04238,
+      "Rerender + Reranking Time": 0.00616,
+      "Total Time": 0.04854,
+      "stage_timings_sec": {
+        "build_candidates_clean": 1.48,
+        "assemble_scenes": 40.8,
+        "execute_constraints": 1.58,
+        "score_visual": 2.33,
+        "score_symbolic": 2.14,
+        "rerank_scenes_public": 1.69,
+        "project_logic_form": 1.95,
+        "eval_pgdp_metrics": 29.62,
+        "run_egsr_core_clean": 82.72
+      },
+      "variant_slug": "tbl7_k5"
+    },
+    {
+      "K": 10,
+      "LS": 98.8,
+      "AS": 93.5,
+      "PR": 78.3,
+      "TS": 77.9,
+      "Assembly + Constraint Time": 0.05358,
+      "Rerender + Reranking Time": 0.00679,
+      "Total Time": 0.06037,
+      "stage_timings_sec": {
+        "build_candidates_clean": 1.56,
+        "assemble_scenes": 51.74,
+        "execute_constraints": 1.84,
+        "score_visual": 2.54,
+        "score_symbolic": 2.35,
+        "rerank_scenes_public": 1.9,
+        "project_logic_form": 2.19,
+        "eval_pgdp_metrics": 29.47,
+        "run_egsr_core_clean": 94.71
+      },
+      "variant_slug": "tbl7_k10"
+    },
+    {
+      "K": 20,
+      "LS": 98.8,
+      "AS": 94.8,
+      "PR": 82.6,
+      "TS": 81.9,
+      "Assembly + Constraint Time": 0.0776,
+      "Rerender + Reranking Time": 0.013,
+      "Total Time": 0.0906,
+      "stage_timings_sec": {
+        "build_candidates_clean": 1.54,
+        "assemble_scenes": 73.7,
+        "execute_constraints": 3.9,
+        "score_visual": 4.26,
+        "score_symbolic": 4.76,
+        "rerank_scenes_public": 3.98,
+        "project_logic_form": 3.41,
+        "eval_pgdp_metrics": 30.11,
+        "run_egsr_core_clean": 126.82
+      },
+      "variant_slug": "tbl7_k20"
+    }
+  ],
+  "timing_protocol": {
+    "time_unit": "seconds per sample",
+    "assembly_constraint": "assemble_scenes + execute_constraints",
+    "rerender_reranking": "score_visual + score_symbolic + rerank_scenes_public",
+    "excluded": [
+      "build_candidates_clean",
+      "project_logic_form",
+      "eval_pgdp_metrics"
+    ]
+  },
+  "note": "This K-sweep is a diagnostic trade-off study over retained timing traces for K=5, 10, and 20. The formal locked manuscript mainline uses K=50, as recorded in the bundled replay metadata, but no stage-separated K=50 timing trace was retained under the same reporting protocol."
+}

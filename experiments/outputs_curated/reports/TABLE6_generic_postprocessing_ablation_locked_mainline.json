@@ -1,0 +1,71 @@
+{
+  "title": "Table 6. Generic Postprocessing Ablation on the Locked EGSR Mainline",
+  "split": "test",
+  "rows": [
+    {
+      "Postprocess Mode": "None",
+      "LS": 99.0,
+      "AS": 95.2,
+      "PR": 83.7,
+      "TS": 83.0,
+      "variant_slug": "tbl6_none"
+    },
+    {
+      "Postprocess Mode": "Canonical normalization",
+      "LS": 99.0,
+      "AS": 95.2,
+      "PR": 83.7,
+      "TS": 83.0,
+      "variant_slug": "tbl6_canonical_normalization"
+    },
+    {
+      "Postprocess Mode": "Canonical + relation conflict handling",
+      "LS": 99.0,
+      "AS": 95.2,
+      "PR": 83.7,
+      "TS": 83.0,
+      "variant_slug": "tbl6_relation_conflict_handling"
+    },
+    {
+      "Postprocess Mode": "Canonical + scalar conflict handling",
+      "LS": 98.0,
+      "AS": 90.5,
+      "PR": 78.3,
+      "TS": 77.7,
+      "variant_slug": "tbl6_scalar_conflict_handling"
+    },
+    {
+      "Postprocess Mode": "Canonical + all conflict handling",
+      "LS": 98.0,
+      "AS": 90.5,
+      "PR": 78.3,
+      "TS": 77.7,
+      "variant_slug": "tbl6_all_conflict_handling"
+    },
+    {
+      "Postprocess Mode": "Canonical + parallel closure",
+      "LS": 99.0,
+      "AS": 95.2,
+      "PR": 83.7,
+      "TS": 83.0,
+      "variant_slug": "tbl6_parallel_closure"
+    },
+    {
+      "Postprocess Mode": "Canonical + equal-length closure",
+      "LS": 99.0,
+      "AS": 95.2,
+      "PR": 83.7,
+      "TS": 83.0,
+      "variant_slug": "tbl6_equal_closure"
+    },
+    {
+      "Postprocess Mode": "Canonical + all generic closure",
+      "LS": 99.0,
+      "AS": 95.2,
+      "PR": 83.7,
+      "TS": 83.0,
+      "variant_slug": "tbl6_all_generic_closure"
+    }
+  ],
+  "note": "This ablation verifies that the locked mainline does not rely on aggressive or sample-specific rewriting. Most generic deterministic postprocessing modes preserve the result, while overly aggressive scalar-conflict removal degrades performance and is therefore excluded from the released path."
+}

@@ -1,0 +1,44 @@
+{
+  "title": "Table 3. Top-K Candidate Quality and Oracle Upper-Bound Analysis",
+  "split": "test",
+  "main_variant": "egsr_clean_mainline_replay",
+  "rows": [
+    {
+      "K": 1,
+      "Coverage@K": 91.5,
+      "TS-Coverage@K": 74.4,
+      "Oracle-LS@K": 97.9,
+      "Oracle-AS@K": 91.5,
+      "Oracle-PR@K": 75.2,
+      "Oracle-TS@K": 74.4
+    },
+    {
+      "K": 5,
+      "Coverage@K": 96.2,
+      "TS-Coverage@K": 84.7,
+      "Oracle-LS@K": 99.4,
+      "Oracle-AS@K": 96.2,
+      "Oracle-PR@K": 85.7,
+      "Oracle-TS@K": 84.7
+    },
+    {
+      "K": 10,
+      "Coverage@K": 96.7,
+      "TS-Coverage@K": 84.7,
+      "Oracle-LS@K": 99.5,
+      "Oracle-AS@K": 96.7,
+      "Oracle-PR@K": 85.7,
+      "Oracle-TS@K": 84.7
+    },
+    {
+      "K": 20,
+      "Coverage@K": 96.8,
+      "TS-Coverage@K": 84.7,
+      "Oracle-LS@K": 99.7,
+      "Oracle-AS@K": 96.8,
+      "Oracle-PR@K": 85.7,
+      "Oracle-TS@K": 84.7
+    }
+  ],
+  "note": "Oracle@K is computed only for post hoc upper-bound diagnosis and is never used during inference."
+}

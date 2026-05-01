@@ -1,0 +1,17 @@
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.pytest_cache/
+.mypy_cache/
+.DS_Store
+Thumbs.db
+
+# Local experiment outputs not part of the public release
+experiments/outputs/*/*/train/
+experiments/outputs/*/*/val/
+
+# Local environment
+.venv/
+venv/
+env/

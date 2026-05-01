@@ -1,0 +1,43 @@
+{
+  "created_on": "2026-05-01",
+  "policy": "Keep only the current public-safe mainline, the frozen clean source artifacts required to replay it, and the protocol records required to audit it.",
+  "official_mainline_variant": "egsr_clean_mainline_replay",
+  "metrics": {
+    "egsr_clean_mainline_replay": {
+      "LS": 99.0,
+      "AS": 95.2,
+      "PR": 83.7,
+      "TS": 83.0
+    },
+    "postproc5_round1_canon_archival_reference": {
+      "LS": 99.0,
+      "AS": 95.3,
+      "PR": 83.8,
+      "TS": 83.1
+    }
+  },
+  "retained_candidate_paths": [
+    "experiments/outputs/candidates/detector_plus_ocr_rules_plus_light_vlm/test",
+    "experiments/outputs/candidates/egsr_clean_mainline_replay/test",
+    "experiments/outputs/candidates/postproc5_round1_canon/test"
+  ],
+  "retained_pipeline_paths": [
+    "experiments/outputs/scenes/egsr_clean_mainline_replay/test",
+    "experiments/outputs/scores/egsr_clean_mainline_replay/test",
+    "experiments/outputs/logic_forms/egsr_clean_mainline_replay/test",
+    "experiments/outputs/eval/egsr_clean_mainline_replay/test",
+    "experiments/outputs/pipelines/egsr_clean_mainline_replay/test",
+    "experiments/outputs/scenes/postproc5_round1_canon/test",
+    "experiments/outputs/scores/postproc5_round1_canon/test",
+    "experiments/outputs/logic_forms/postproc5_round1_canon/test",
+    "experiments/outputs/eval/postproc5_round1_canon/test",
+    "experiments/outputs/pipelines/postproc5_round1_canon/test"
+  ],
+  "protocol_records": [
+    "notes/clean_evidence/2026-05-01_clean_dev_protocol_gap.md",
+    "notes/clean_evidence/2026-05-01_formal_result_lock.md",
+    "notes/clean_evidence/2026-05-01_project_cleanup_manifest.md",
+    "notes/clean_evidence/2026-05-01_seven_table_execution_protocol.md",
+    "notes/clean_evidence/2026-05-01_seven_table_execution_status.md"
+  ]
+}

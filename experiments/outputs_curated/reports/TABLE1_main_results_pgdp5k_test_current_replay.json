@@ -1,0 +1,36 @@
+{
+  "title": "Table 1. Main Results on the PGDP5K Test Split",
+  "split": "test",
+  "rows": [
+    {
+      "Method": "InterGPS",
+      "LS": 65.7,
+      "AS": 44.4,
+      "PR": 40.0,
+      "TS": 27.3
+    },
+    {
+      "Method": "PGDPNet w/o GNN",
+      "LS": 98.4,
+      "AS": 93.1,
+      "PR": 79.7,
+      "TS": 78.2
+    },
+    {
+      "Method": "PGDPNet",
+      "LS": 99.0,
+      "AS": 96.6,
+      "PR": 86.2,
+      "TS": 84.7
+    },
+    {
+      "Method": "EGSR (Ours)",
+      "LS": 99.0,
+      "AS": 95.2,
+      "PR": 83.7,
+      "TS": 83.0,
+      "variant_slug": "egsr_clean_mainline_replay"
+    }
+  ],
+  "note": "EGSR denotes the current clean no-oracle replayable mainline under the locked public-safe protocol."
+}

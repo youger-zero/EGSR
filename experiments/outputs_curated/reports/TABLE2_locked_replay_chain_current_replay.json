@@ -1,0 +1,58 @@
+{
+  "title": "Table 2. Locked EGSR Replay Chain and Artifact Trace",
+  "split": "test",
+  "main_variant": "egsr_clean_mainline_replay",
+  "rows": [
+    {
+      "Stage": "Candidate source",
+      "Artifact / Source": "detector + OCR/rules + light VLM",
+      "Split": "test",
+      "Output Type": "primitive/relation candidates",
+      "Role": "clean candidate proposal"
+    },
+    {
+      "Stage": "Scene replay",
+      "Artifact / Source": "locked replay candidates",
+      "Split": "test",
+      "Output Type": "replayed scene hypotheses",
+      "Role": "scene reconstruction"
+    },
+    {
+      "Stage": "Constraint scoring",
+      "Artifact / Source": "locked scoring module",
+      "Split": "test",
+      "Output Type": "residuals / scores",
+      "Role": "executable checking"
+    },
+    {
+      "Stage": "Logic projection",
+      "Artifact / Source": "canonical projection",
+      "Split": "test",
+      "Output Type": "PGDP logic forms",
+      "Role": "deterministic output"
+    },
+    {
+      "Stage": "Evaluation",
+      "Artifact / Source": "official evaluator",
+      "Split": "test",
+      "Output Type": "LS / AS / PR / TS",
+      "Role": "post hoc metric computation"
+    },
+    {
+      "Stage": "Pipeline metadata",
+      "Artifact / Source": "locked config and logs",
+      "Split": "test",
+      "Output Type": "configs / run records",
+      "Role": "reproducibility audit"
+    }
+  ],
+  "artifacts": {
+    "candidates": "experiments/outputs/candidates/egsr_clean_mainline_replay/test",
+    "scenes": "experiments/outputs/scenes/egsr_clean_mainline_replay/test",
+    "scores": "experiments/outputs/scores/egsr_clean_mainline_replay/test",
+    "logic_forms": "experiments/outputs/logic_forms/egsr_clean_mainline_replay/test",
+    "eval": "experiments/outputs/eval/egsr_clean_mainline_replay/test",
+    "pipelines": "experiments/outputs/pipelines/egsr_clean_mainline_replay/test"
+  },
+  "note": "The locked manuscript mainline uses K=50 replayed scene hypotheses. Ground-truth logic forms are used only by the final evaluator after prediction."
+}

@@ -1,0 +1,41 @@
+{
+  "title": "Table 5. Internal Consistency Analysis of Locked-Mainline Variants",
+  "split": "test",
+  "rows": [
+    {
+      "Variant": "Direct projection",
+      "Executability Rate": 0.991,
+      "Mean Residual": 0.296391,
+      "Render Consistency": 0.999569,
+      "variant_slug": "tbl4_direct_projection"
+    },
+    {
+      "Variant": "Reranking only",
+      "Executability Rate": 0.992,
+      "Mean Residual": 0.155301,
+      "Render Consistency": 0.945965,
+      "variant_slug": "tbl4_reranking_only"
+    },
+    {
+      "Variant": "Canonical projection only",
+      "Executability Rate": 0.991,
+      "Mean Residual": 0.296391,
+      "Render Consistency": 0.999569,
+      "variant_slug": "tbl4_canonical_projection_only"
+    },
+    {
+      "Variant": "Reranking + canonical projection",
+      "Executability Rate": 0.992,
+      "Mean Residual": 0.154416,
+      "Render Consistency": 0.945541,
+      "variant_slug": "tbl4_reranking_plus_canonical_projection"
+    },
+    {
+      "Variant": "Locked EGSR mainline",
+      "Executability Rate": 0.992,
+      "Mean Residual": 0.294769,
+      "Render Consistency": 0.999522,
+      "variant_slug": "egsr_clean_mainline_replay"
+    }
+  ]
+}
